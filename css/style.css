@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
+.container {
+  padding: 10px 50px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.title {
+  margin-bottom: 50px;
+  color: rgb(83, 47, 23);
+  font-size: 48px;
+  font-style: italic;
+  text-align: left;
+}
+.timer {
+  display: flex;
+  margin-bottom: 50px;
+  padding: 0 15%;
+  align-items: center;
+
+}
+.time {
+  margin-right: 30%;
+  font-size: 36px;
+  font-weight: 400;
+  color: black;
+}
+.btn__start {
+  padding: 10px 20px;
+  border: none;
+  font-size: 22px;
+  color: black;
+  background-color: rgb(231, 123, 123);
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+}
+.btn__start:hover,
+.btn__start:active {
+  outline: 2px solid rgb(121, 41, 41);
+}
+.game {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 100px;
+  background-color: rgb(121, 41, 41);
+  color: transparent;
+  border-radius: 15px;
+  font-size: 50px;
+  font-weight: 700;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.card.open {
+  background-color: rgb(231, 123, 123);
+  background-image: none;
+  color: black;
+}
+.card.success {
+  background-color: rgb(95, 151, 95);
+  color: white;
+  transform: scale(0.95);
+}
+.overlay {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay.show {
+  display: flex;
+}
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  left: 30%;
+  padding: 2% 5%;
+  background-color: #FFFFFF;
+  width: 46.9%;
+  min-height: 200px;
+}
+.message {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color:rgb(121, 41, 41);
+}
+.btn__again {
+  padding: 10px 20px;
+  border: none;
+  font-size: 22px;
+  color: rgb(121, 41, 41);
+  background-color: rgb(231, 123, 123);
+  border-radius: 50px;
+  width: 50%;
+  align-self: center;
+  cursor: pointer;
+  outline: none;
+}
